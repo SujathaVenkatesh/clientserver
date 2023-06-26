@@ -1,0 +1,348 @@
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://www.teahub.io/photos/full/151-1512693_house-image-real-estate.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+:root {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+
+.circle--slider {
+  position: relative;
+  width: 100%;
+  max-width: 590px;
+  height: 590px;
+}
+
+.rotate--circle {
+  position: relative;
+  width: 100%;
+  height: 590px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle--rotate {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  position: relative;
+  z-index: 0;
+  padding: 0px;
+  transform: rotate(0deg);
+  transition: none;
+  animation: rotateCircle 20s linear infinite;
+}
+
+@keyframes rotateCircle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle--rotate li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.circle--rotate .block {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 25px;
+  height: 250px;
+  margin-top: -80px;
+  margin-left: -12.5px;
+  transform-origin: center bottom;
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle--rotate .block.active {
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+.circle--rotate .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.image-title {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 160px;
+}
+
+.circle--rotate .icon.active {
+  opacity: 1;
+}
+
+.circle--rotate .icon svg {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.circle--rotate .icon span {
+  font-size: 14px;
+}
+
+.animate-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.animate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animate.animate-0 {
+  opacity: 1;
+  background-image: url('https://images.unsplash.com/photo-1522307837370-cc113a36b784?ixlib=rb-0.3.5&s=9a7336a358f84eccc3c50f9b754c4bae&auto=format&fit=crop&w=1350&q=80');
+  animation: rotateImage 10s linear infinite;
+}
+
+.animate.animate-1 {
+  opacity: 1;
+  background-image: url('https://media.istockphoto.com/id/1363104989/photo/diverse-team-of-professional-businesspeople-meeting-in-the-office-conference-room-creative.jpg?s=612x612&w=0&k=20&c=TGdAKum3fkCmS0R57vk7tbZaGkQ_Lc9EC2uvOhTowIE=');
+  animation: zoomInImage 10s ease-in-out infinite;
+}
+
+.animate.animate-2 {
+  opacity: 1;
+  background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+  animation: rotateImage 10s linear infinite;
+}
+
+.animate.animate-3 {
+  opacity: 1;
+  background-image: url('https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+  animation: zoomInImage 10s ease-in-out infinite;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.prev {
+  left: -30px;
+}
+
+.next {
+  right: -30px;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes zoomInImage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideImage {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeImage {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/* Common Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .services {
+    height: auto;
+    padding: 20px;
+  }
+
+  .circle--slider {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .rotate--circle {
+    height: auto;
+  }
+
+  .circle--rotate {
+    width: 100%;
+    height: auto;
+  }
+
+  .circle--rotate li {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+
+  .circle--rotate .block {
+    width: 15px;
+    height: 150px;
+    margin-top: -40px;
+    margin-left: -7.5px;
+  }
+
+  .image-title {
+    font-size: 20px;
+    margin-top: 80px;
+  }
+
+  .animate-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+
+  .animate {
+    opacity: 0;
+  }
+
+  .prev,
+  .next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle--rotate li {
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+  }
+
+  .circle--rotate .block {
+    width: 12.5px;
+    height: 125px;
+    margin-top: -30px;
+    margin-left: -6.25px;
+  }
+
+  .image-title {
+    font-size: 16px;
+    margin-top: 60px;
+  }
+
+  .animate-wrapper {
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
+  }
+
+  .animate {
+    opacity: 0;
+  }
+
+  .prev,
+  .next {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}

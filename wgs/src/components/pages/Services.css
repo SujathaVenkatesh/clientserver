@@ -1,0 +1,174 @@
+
+:root {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.theme-text {
+  color: orange;
+}
+
+.cards-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: orange;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(1.2);
+  animation: rotateColors 5s linear infinite;
+}
+
+@keyframes rotateColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.container-fluid {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-row .card {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.container-fluid {
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-body {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
+
+.link-button {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  transform-origin: bottom;
+  transform: translateY(0);
+}
+
+.link-button:hover {
+  background-color: white;
+  color: orange;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 3rem;
+  /* Increase the font size to make the icons larger */
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 5px solid orange;
+  animation: borderAnimation 2s linear infinite;
+}
+
+.card:hover {
+  animation-play-state: paused;
+}
+
+.cards-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: white;
+  color: orange;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: orange;
+}
+
+

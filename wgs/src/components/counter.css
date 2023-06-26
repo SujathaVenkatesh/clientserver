@@ -1,0 +1,155 @@
+:root {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.rectangle3 {
+  width: 39%;
+  height: 620px;
+  background-color: #202325;
+  display: table-cell;
+  color: white;
+  padding: 30px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.rectangle4 {
+  width: 80%;
+  background-color: #f08620;
+  display: table-cell;
+}
+
+.hh2 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+}
+
+button {
+  margin: 50px;
+}
+
+.counter_up {
+  margin-right: 200px;
+}
+
+#i1 {
+  width: 35%;
+  margin-left: 4%;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  animation: zoom-in-zoom-out 1s;
+}
+
+#i2 {
+  width: 35%;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: -580px;
+  margin-left: 520px;
+  animation: zoom-in-zoom-out 1s;
+  animation-delay: 0.3s;
+}
+
+#i3 {
+  width: 39%;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: 50px;
+  animation: zoom-in-zoom-out 1s;
+  animation-delay: 0.6s;
+}
+
+#i4 {
+  width: 35%;
+  margin-left: 500px;
+  margin-top: -500px;
+  border-radius: 10px;
+  animation: zoom-in-zoom-out 1s;
+  animation-delay: 0.9s;
+}
+
+button {
+  border-radius: 20%;
+  background-color: #f08620;
+}
+
+#hh3 {
+  color: #202325;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxs {
+  width: 23%;
+  padding: 30px;
+  background-color: aliceblue;
+  margin-left: 780px;
+  margin-top: -520px;
+  border-radius: 3%;
+  position: absolute;
+  height: 36%;
+}
+
+#p1 {
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: normal;
+  margin-left: 180px;
+  position: absolute;
+  top: 15px;
+}
+
+.rectangle4 .MyClass {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .rectangle3 {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .rectangle4 {
+    width: 100%;
+  }
+
+  .rectangle4 .MyClass {
+    flex-direction: column;
+  }
+
+  #i1,
+  #i2,
+  #i3,
+  #i4 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .boxs {
+    width: 90%;
+    margin: 0 auto;
+    position: static;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+}

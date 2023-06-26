@@ -1,0 +1,260 @@
+:root {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.circle {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+.sections-header h3 {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  background-color: black;
+}
+
+#circle
+{
+  color: black;
+}
+.circle-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+.circle-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-left: 60px; /* Adjust this value to move the circle towards the right */
+  
+  
+}
+.right-side-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center; /* Center-align the title */
+}
+.headi {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  margin-top: 20px;
+  color: black;
+  margin-right: -100px;
+}
+
+.circle_subheading{
+  font-size: 20px;
+  text-align: center;
+}
+.right-side-content p {
+  font-size: 16px;
+  text-align: center; /* Center-align the paragraph content */
+}
+
+.containerlm {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.dolu {
+  width: 15%; /* Adjust this value to make the circle smaller */
+  height: auto;
+  border-radius: 50%;
+}
+
+.circleom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  margin-right: 50px;
+}
+
+.inner-circlesmn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--circle-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-icon {
+  color: #fff;
+  font-size: 24px;
+}
+
+.right-side-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px; 
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+
+
+.right-side-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.right-side-content p {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+.containerlm {
+  width: 500px; /* Adjust the width as desired */
+  min-height: 500px; /* Adjust the height as desired */
+  position: relative;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  animation: rotate 40s linear infinite;
+}
+
+.circleom {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: 550ms ease;
+}
+
+.inner-circlesmn {
+  position: absolute;
+  background-color: var(--circle-color);
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-left: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: background 350ms ease, color 350ms ease-in-out;
+  animation: rotate-opposite 40s linear infinite;
+  overflow: hidden;
+}
+
+.cirl {
+  text-align: center;
+  margin-left: -70px;
+  justify-content: center;
+}
+
+.inner-circlesmn:hover {
+  background-color: coral;
+  color: white;
+}
+
+.circle-icon {
+  font-size: 3rem; /* Adjust the size as desired */
+}
+
+.inner-circlesmn {
+  position: absolute;
+  background-color: var(--circle-color);
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-left: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: background 350ms ease, color 350ms ease-in-out;
+  animation: rotate-opposite 40s linear infinite;
+  overflow: hidden;
+}
+
+.inner-circlesmn:hover {
+  background-color: coral;
+  color: white;
+}
+
+.inner-circlesmn::after {
+  content: attr(data-content);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: coral;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  transition: opacity 350ms ease-in-out;
+  opacity: 0;
+}
+
+.inner-circlesmn:hover::after {
+  opacity: 1;
+}
+
+.dolu {
+  width: 25%;
+  animation: rotate-opposite 40s linear infinite;
+  border-radius: 100vw;
+  outline: 4px solid hsl(120, 70%, 60%);
+  outline-offset: 8px;
+  z-index: 1;
+  --start-angle-of-rotation: 0deg;
+  --end-angle-of-rotation: -360deg;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-opposite {
+  from {
+    transform: rotate(var(--start-angle-of-rotation));
+  }
+  to {
+    transform: rotate(var(--end-angle-of-rotation));
+  }
+}

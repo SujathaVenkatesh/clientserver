@@ -1,0 +1,60 @@
+#call-to-action {
+    background: linear-gradient(to bottom, #000000, #ffffff, #888888);
+    background-color: orange;
+    padding: 60px 0;
+  }
+  
+.containertemp {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .text-centertemp {
+    text-align: center;
+  }
+  
+  .animate-zoom-in {
+    animation: zoom-in 1s;
+  }
+  
+  @keyframes zoom-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  #call-to-action {
+    background-color:orange;
+    padding: 60px 0;
+
+  }
+  
+  .action {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 30px;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: orange;
+  }
+  

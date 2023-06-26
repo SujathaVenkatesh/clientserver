@@ -1,0 +1,87 @@
+.names {
+    background: url('./images/tcs2.jpg') center center/cover no-repeat;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    color: black;
+  }
+  
+  :root {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      background-size: 100%;
+    }
+    50% {
+      background-size: 120%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }
+  
+  
+  .name > h1 {
+    color: black;
+    font-size: 50px;
+    margin-top: -78px;
+    /* margin-right: -50px; */
+    margin-left: 70px;
+  
+  }
+  
+  .name > p {
+    margin-top: 8px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .hero-btns {
+    margin-top: 32px;
+  }
+  
+  .hero-btns .btn {
+    margin: 6px;
+  }
+  
+  .fa-play-circle {
+    margin-left: 4px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .name > h1 {
+      font-size: 70px;
+      margin-top: -150px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .name > h1 {
+      font-size: 40px;
+      margin-top: -15px;
+    }
+  
+    .name > p {
+      font-size: 25px;
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+      color: black;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+  
